@@ -1,0 +1,33 @@
+% Variable bindings
+X = 10
+Y = X * 2
+Z = {result, Y}
+
+% Arithmetic
+2 + 3 * 4
+10 div 3
+10 mod 3
+
+% Comparisons
+5 > 3
+10 == 10
+
+% Data structures
+[1, 2, 3, 4, 5]
+{erlang, "is", awesome}
+
+% Function definitions
+double(X) -> X * 2.
+factorial(0) -> 1; factorial(N) when N > 0 -> N * factorial(N - 1).
+fib(0) -> 0; fib(1) -> 1; fib(N) when N > 1 -> fib(N - 1) + fib(N - 2).
+first({X, _, _}) -> X.
+sum_list([]) -> 0; sum_list([H | T]) -> H + sum_list(T).
+
+% Function calls
+double(21)
+factorial(5)
+fib(10)
+first({hello, world, 123})
+sum_list([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+
+quit.
